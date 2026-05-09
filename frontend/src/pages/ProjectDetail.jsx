@@ -13,6 +13,7 @@ const ProjectDetail = () => {
   const [taskForm, setTaskForm] = useState({ title: '', description: '', priority: 'medium', due_date: '', assigned_to: '' });
   const [memberEmail, setMemberEmail] = useState('');
 
+  // eslint-disable-next-line
   useEffect(() => {
     fetchProject();
     fetchTasks();
