@@ -3,7 +3,7 @@
 A full-stack web app for managing projects and tasks with role-based access control.
 
 ## Live Demo
-- Frontend: https://team-task-manager-mmsa-git-main-deeptiverma12s-projects.vercel.app
+- Frontend: https://team-task-manager-mmsa.vercel.app
 - Backend API: https://team-task-manager-production-e480.up.railway.app
 
 ## Features
