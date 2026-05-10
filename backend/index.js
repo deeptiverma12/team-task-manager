@@ -11,8 +11,7 @@ const app = express();
 
 // middlewares
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://team-task-manager-mmsa.vercel.app', 'https://team-task-manager-mmsa-5rb594y06-deeptiverma12s-projects.vercel.app'],
-  credentials: true
+  origin: '*'
 }));
 app.use(express.json());
 
