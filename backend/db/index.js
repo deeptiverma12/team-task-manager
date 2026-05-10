@@ -1,18 +1,13 @@
 const { Pool } = require('pg');
+const dns = require('dns');
 require('dotenv').config();
 
-const connectionString = process.env.DATABASE_URL;
+// force IPv4 DNS resolution
+dns.setDefaultResultOrder('ipv4first');
 
-// parse the url and force IPv4
 const pool = new Pool({
-  connectionString,
-  ssl: { rejectUnauthorized: false },
-  host: 'db.gsalfggqfuijgwbwuzkn.supabase.co',
-  port: 5432,
-  database: 'postgres',
-  user: 'postgres',
-  password: 'BOqoaJT4k3B9pOUA',
-  family: 4
+  connectionString: process.env.DATABASE_URL,
+  ssl: { rejectUnauthorized: false }
 });
 
 module.exports = pool;
